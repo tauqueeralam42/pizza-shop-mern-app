@@ -15,11 +15,9 @@ const app = express();
 
 //middlewares
 app.use(express.json());
-app.use(cors());
 app.use(cors({
-  origin: 'https://66938a669ef7e2318c5fc0f5--pizza-virus.netlify.app'
+  origin: '*'
 }));
-
 //route
 app.use("/api/pizzas", require("./routes/pizzaRoute"));
 app.use("/api/users", require("./routes/userRoutes"));
